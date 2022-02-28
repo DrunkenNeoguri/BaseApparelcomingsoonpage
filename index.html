@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">    
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+
+
+  <body>
+    <header class="banner">
+      <img src="images/logo.svg" alt="BASE APPAREL site banner">
+    </header>
+
+    <div class="container" role="main">
+      <div class="container__contents">
+        <div class="container__contents__title">
+          <h1>We're<br><span>coming<br>soon</span></h1>
+        </div>
+
+        <p class="container__contents__paragraph">
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+
+        <form class="container__contents__input">
+          <input type="text" name="email" placeholder="Email Address">
+          <img src="images/icon-error.svg" class="error__icon" alt="Email address error alret image">
+          <button type="button" name="submit" onclick="SubmitCheck()" onkeydown="SubmitCheck()">
+            <img src="images/icon-arrow.svg" alt="submit button">
+          </button>
+        </form>
+      </div>
+
+      <div class="container__mookup">
+      </div>
+    </div>
+
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">drunken_neoguri</a>.
+      </p>
+    </footer>
+  </body>
+</html>

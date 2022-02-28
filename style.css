@@ -1,0 +1,264 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+
+/* base */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background */
+    /* display */
+    /* font */
+    font-family: "Josefin Sans", sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+    /* margin, padding, border */
+
+    margin:0;
+    /* etc */
+}
+
+header {
+    display: inline;
+    position:absolute;
+    z-index: 999;
+
+    padding:4rem 0;
+    margin-left:20vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100vh;
+}
+
+
+
+/* container__contents */
+
+.container__contents {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    margin:auto 0;
+    margin-left:20vh;
+}
+
+.container__contents__title {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    line-height: 4.5rem;
+
+    margin-top: 2rem;
+}
+
+.container__contents__title h1 {
+    font-weight: 300;
+    
+    margin: 1rem 0;
+}
+
+.container__contents__title span {
+    font-weight: 600;
+
+    color:hsl(0, 6%, 24%);
+}
+
+.container__contents__paragraph {
+    line-height: 2rem;
+
+    margin-right:0rem;
+
+    max-width: 450px;
+
+    margin-bottom: 2rem;
+}
+
+.container__contents__input {
+    display:block;
+    position:relative;
+
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+
+    height:50px;
+    width:100%;
+}
+
+.container__contents__input input {
+    position: absolute;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:1.1rem;
+
+    padding-left:30px;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    outline: none;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container__contents__input button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    position: absolute;
+
+    padding: 0 3rem;
+    border:none;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: 0px 4px 8px 1px hsl(0, 26%, 70%);
+
+    top:0;
+    right:0;
+    height:100%;
+    width: 70px;
+    cursor: pointer;
+}
+
+.container__contents__input button:hover {
+    background: linear-gradient(135deg, hsla(0, 80%, 86%, 60%), hsla(0, 74%, 74%, 60%));
+
+    box-shadow: 0px 4px 10px 0.5px hsl(0, 26%, 70%);
+}
+
+.container__contents__input input::placeholder {
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsla(0, 36%, 70%, 70%);
+
+    outline: none;
+}
+
+
+
+/* container__contents__input error state */
+
+.error__icon {
+    display: none;
+    position: absolute;
+
+    top: 24%;
+    right:110px;
+}
+
+.error__text {
+    margin-left: 1.5rem;
+
+    color: hsl(0, 93%, 68%);
+}
+
+
+
+/* container__mookup */
+
+.container__mookup {
+    display: block;
+    background-image: url("images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width:40%;
+   
+}
+
+
+@media(max-width:1000px) {
+    body {
+        max-width: 360px;
+        margin:auto;
+    }
+
+    header {
+        display: block;
+        position:unset;
+        z-index: unset;
+    
+        padding:2rem 0;
+        margin-left:5vh;
+    }
+
+    header img {
+        max-width: 8rem;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-rows: 0.6fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container__mookup {
+        background-image: url("images/hero-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        margin: 9rem 0;
+        max-width: 400px;
+        width:100%;
+        height:100%;
+        order:1;
+    }
+
+    .container__contents {
+        text-align: center;
+
+        margin:auto;
+        order:2;
+    }
+
+    .container__contents__title {
+        font-size: 1.5rem;
+        letter-spacing: 1.2rem;
+        text-transform: uppercase;
+        line-height: 3rem;
+    
+        margin-top: 0;
+    }
+        
+    .container__contents__paragraph {
+        line-height: 1.5rem;
+
+        margin-top: 1rem;
+    }
+
+    .container__contents__input {
+        max-width: 340px;
+    }
+
+    .container__contents__input input {
+        font-size:0.9rem;
+    }
+}
+
+
+
+/* attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
